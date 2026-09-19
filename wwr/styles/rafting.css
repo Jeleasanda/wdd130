@@ -31,16 +31,32 @@ nav, p, section, article {
     padding: 8px;
 }
 
-.socialmedia a {
-    text-decoration: none;
+/* --- STYLES TO SHRINK THE HEADER LOGO --- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 10px;
 }
 
-/* Hero Section Styles */
+header img {
+    width: 100px; /* Shrinks the logo to 100 pixels wide */
+    height: auto;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+/* --- HERO SECTION STYLES --- */
 .hero {
     position: relative;
 }
 
-.hero img {
+.hero > img {
     display: block;
     width: 100%;
     height: auto;
@@ -70,4 +86,20 @@ nav, p, section, article {
     float: right;
     width: 125px;
     margin-left: 10px;
+}
+
+/* --- STYLES TO SHRINK SOCIAL MEDIA ICONS --- */
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socialmedia img {
+    width: 40px; /* Shrinks social icons to 40 pixels wide */
+    height: auto;
+}
+
+.socialmedia a {
+    text-decoration: none;
 }
