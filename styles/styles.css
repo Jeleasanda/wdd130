@@ -5,29 +5,42 @@
     box-sizing: border-box;
 }
 
-main {
+/* Limit page width and center content */
+header, .grid, footer {
     max-width: 840px;
     margin: 0 auto;
 }
 
-/* Navigation */
+/* Navigation Flexbox */
 nav {
     background-color: steelblue;
     padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
     color: white;
     display: block;
-    padding: 20px;
+    padding: 10px;
+    text-decoration: none;
 }
 
-/* Headings */
+/* Heading styling */
 h1 {
-    color: steelblue;
+    border-bottom: 2px solid steelblue;
+    padding-bottom: 10px;
 }
 
-/* Float Profile Image */
+/* Grid Layout for Main and Aside */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Aside left, Main right */
+    gap: 20px;
+    margin-top: 20px;
+}
+
 main img {
     float: right;
     width: 150px;
@@ -42,14 +55,12 @@ p {
     padding: 0;
 }
 
-/* Aside Positioning */
 aside {
-    width: 20rem;
+    width: 100%; /* Takes full width of its grid column */
     text-align: center;
-    position: relative; /* Needed for the absolute h2 overlay */
+    position: relative;
 }
 
-/* Overlay Heading on Aside Image */
 aside h2 {
     position: absolute;
     top: 20px;
@@ -61,11 +72,10 @@ aside h2 {
 }
 
 aside img {
-    width: 200px;
+    width: 100%;
     height: auto;
 }
 
-/* Footer */
 footer {
     margin-top: 15px;
     border-top: 1px solid #000;
@@ -80,3 +90,5 @@ footer {
     background-color: #eee;
     color: #333;
 }
+
+
