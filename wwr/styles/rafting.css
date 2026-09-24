@@ -31,29 +31,38 @@ nav, p, section, article {
     padding: 8px;
 }
 
-/* --- STYLES TO SHRINK THE HEADER LOGO --- */
+/* --- HEADER: CSS GRID --- */
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    justify-content: space-between;
     background-color: var(--primary-color);
     padding: 10px;
 }
 
 header img {
-    width: 100px; /* Shrinks the logo to 100 pixels wide */
+    width: 100px;
     height: auto;
+}
+
+/* --- NAV: CSS FLEX --- */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
 header nav a {
     color: white;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 10px;
+    font-weight: bold;
 }
 
-/* --- HERO SECTION STYLES --- */
+/* --- HERO SECTION --- */
 .hero {
     position: relative;
+    margin-top: 20px;
 }
 
 .hero > img {
@@ -88,15 +97,85 @@ header nav a {
     margin-left: 10px;
 }
 
-/* --- STYLES TO SHRINK SOCIAL MEDIA ICONS --- */
+/* --- HISTORY SECTION: CSS GRID --- */
+.history-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.history-section h2 {
+    margin-bottom: 20px;
+}
+
+.history-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns: text, image, text */
+    gap: 20px;
+    align-items: center;
+}
+
+.history-layout img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.history-layout p {
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+/* --- ADVENTURE SECTION --- */
+.adventure-section {
+    margin-top: 30px;
+}
+
+.adventure-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for the 5 images */
+    gap: 10px;
+}
+
+.adventure-gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.adventure-gallery figcaption {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: 30px;
+    border-top: 2px solid var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
 .socialmedia {
     display: flex;
-    justify-content: center;
     gap: 10px;
 }
 
 .socialmedia img {
-    width: 40px; /* Shrinks social icons to 40 pixels wide */
+    width: 30px;
     height: auto;
 }
 
