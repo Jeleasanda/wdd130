@@ -10,8 +10,10 @@
 </head>
 <body>
     <header>
+        <!-- CSS Grid is used here -->
         <img src="images/logo.jpg" alt="Splash White Water Rafting Logo">
         <nav>
+            <!-- CSS Flex is used here -->
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
@@ -29,14 +31,41 @@
             </article>
         </div>
 
-        <section>
+        <!-- History Section: Text Left, Image Center, Text Right -->
+        <section class="history-section">
             <h2>History</h2>
-            <p>Founded in 1995 by a group of adventure enthusiasts, Splash White Water Rafting has grown into a leading provider of unforgettable outdoor experiences.</p>
+            <div class="history-layout">
+                <p>Founded in 1995 by a group of adventure enthusiasts, Splash White Water Rafting has grown into a leading provider of unforgettable outdoor experiences. We started with just a handful of rafts and a passion for exploration.</p>
+                <img src="images/history.jpg" alt="Early days of rafting">
+                <p>Over the decades, we have expanded our operations, trained hundreds of expert guides, and introduced thousands of guests to the thrill of white water. Our commitment to safety and fun has never wavered.</p>
+            </div>
         </section>
 
-        <section>
+        <!-- Adventure Section: 5 images horizontally -->
+        <section class="adventure-section">
             <h2>Adventure Awaits You!</h2>
-            <!-- This section will be filled with images in the next assignment -->
+            <div class="adventure-gallery">
+                <figure>
+                    <img src="images/adventure1.jpg" alt="Los Dientes del Diablo">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure2.jpg" alt="Big Mallard">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure3.jpg" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure4.jpg" alt="The Rapids">
+                    <figcaption>The Rapids</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure5.jpg" alt="Sunset Float">
+                    <figcaption>Sunset Float</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
