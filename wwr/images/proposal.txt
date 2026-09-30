@@ -1,37 +1,52 @@
 CSE 111 Proposal for a Student Chosen Program
 
-    (This is a proposal. All proposals are written with our best
-    knowledge at the beginning of a project. As we progress from the
-    beginning to the end of a project, we gain more knowledge, and we
-    change some of our proposed ideas. This is part of completing any
-    project and is fine.  However, we still must write a proposal so
-    that our teachers or supervisors know what we intend to do. Please
-    answer each of the following questions to the best of your
-    knowledge.)
+Name: Asanda Jele
+Date: September 30, 2026
 
 1. What is the title of your program?
 
+Study Time Tracker
+
 2. What real-world problem will your program address or help to solve?
+
+Many students struggle to balance their study time across different subjects. They may spend too much time on one course and neglect another without realizing it. This program will help students see exactly how much time they spend on each subject so they can adjust their study habits and improve their grades.
 
 3. What will you learn from developing this program?
 
+I will learn how to read data from CSV files, process that data using functions, and write test functions to verify that my code works correctly. I will also learn how to use dictionaries to organize data and how to handle errors gracefully.
+
 4. What Python modules will your program use?
 
-    (Some examples are: csv, datetime, functools, matplotlib, math,
-    pandas, pytest, random, requests, and tkinter.)
+csv (to read the study log file)
+
+datetime (to work with dates)
+
+math (for calculations like averages)
+
+pytest (for testing)
 
 5. List the names of functions you will need?
 
-    (Remember that the most reusable functions don't get user input and
-    don't print results but instead have parameters and return a result.
-    Functions that get user input and print results are important and do
-    useful work but are not easily reusable.)
+read_study_log(filename) – Reads the CSV file and returns a list of study sessions. (parameters, returns a result)
 
-    (Remember also that it's hard to test functions that get user input
-    and print results. It's easy to test functions that don't get user
-    input and don't print results but instead have parameters and return
-    a result. Therefore, you should write most of your program functions
-    to have parameters and return a result.)
+calculate_total_time(sessions) – Returns the total minutes studied. (parameters, returns a result)
+
+calculate_average_session(sessions) – Returns the average minutes per session. (parameters, returns a result)
+
+time_per_subject(sessions) – Returns a dictionary with total minutes for each subject. (parameters, returns a result)
+
+find_weakest_subject(subject_times) – Returns the subject with the lowest total time. (parameters, returns a result)
+
+main() – Calls all functions, displays the summary report, and handles errors. (gets user input, prints results)
 
 6. List the names of the test functions you will write.
+
+test_calculate_total_time() – Verifies total time calculation with known data.
+
+test_calculate_average_session() – Verifies average calculation.
+
+test_time_per_subject() – Verifies the subject dictionary is correct.
+
+test_find_weakest_subject() – Verifies the weakest subject is identified correctly.
+
 
