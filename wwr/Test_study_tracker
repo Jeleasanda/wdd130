@@ -1,0 +1,81 @@
+from study_tracker import (
+    calculate_total_time,
+    calculate_average_session,
+    time_per_subject
+)
+
+
+def test_calculate_total_time():
+    sessions = [
+        {
+            "Date": "2026-10-01",
+            "Subject": "Python",
+            "Minutes Studied": 60
+        },
+        {
+            "Date": "2026-10-01",
+            "Subject": "Math",
+            "Minutes Studied": 40
+        },
+        {
+            "Date": "2026-10-02",
+            "Subject": "Python",
+            "Minutes Studied": 30
+        }
+    ]
+
+    assert calculate_total_time(sessions) == 130
+
+
+def test_calculate_average_session():
+    sessions = [
+        {
+            "Date": "2026-10-01",
+            "Subject": "Python",
+            "Minutes Studied": 60
+        },
+        {
+            "Date": "2026-10-01",
+            "Subject": "Math",
+            "Minutes Studied": 40
+        },
+        {
+            "Date": "2026-10-02",
+            "Subject": "Python",
+            "Minutes Studied": 50
+        }
+    ]
+
+    assert calculate_average_session(sessions) == 50
+
+
+def test_time_per_subject():
+    sessions = [
+        {
+            "Date": "2026-10-01",
+            "Subject": "Python",
+            "Minutes Studied": 60
+        },
+        {
+            "Date": "2026-10-01",
+            "Subject": "Math",
+            "Minutes Studied": 40
+        },
+        {
+            "Date": "2026-10-02",
+            "Subject": "Python",
+            "Minutes Studied": 30
+        },
+        {
+            "Date": "2026-10-02",
+            "Subject": "Math",
+            "Minutes Studied": 20
+        }
+    ]
+
+    expected = {
+        "Python": 90,
+        "Math": 60
+    }
+
+    assert time_per_subject(sessions) == expected
