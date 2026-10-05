@@ -1,0 +1,113 @@
+import csv
+
+
+def read_study_log(filename):
+    """Read study sessions from a CSV file."""
+    sessions = []
+
+    with open(filename, "r", newline="") as file:
+        reader = csv.DictReader(file)
+
+        for row in reader:
+            session = {
+                "Date": row["Date"],
+                "Subject": row["Subject"],
+                "Minutes Studied": int(row["Minutes Studied"])
+            }
+
+            sessions.append(session)
+
+    return sessions
+
+
+def calculate_total_time(sessions):
+    """Return the total number of minutes studied."""
+    total = 0
+
+    for session in sessions:
+        total += session["Minutes Studied"]
+
+    return total
+
+
+def calculate_average_session(sessions):
+    """Return the average number of minutes per study session."""
+    if len(sessions) == 0:
+        return 0
+
+    total = calculate_total_time(sessions)
+
+    return total / len(sessions)
+
+
+def time_per_subject(sessions):
+    """Return a dictionary containing total study time for each subject."""
+    subject_times = {}
+
+    for session in sessions:
+        subject = session["Subject"]
+        minutes = session["Minutes Studied"]
+
+        if subject not in subject_times:
+            subject_times[subject] = 0
+
+        subject_times[subject] += minutes
+
+    return subject_times
+
+
+def find_weakest_subject(subject_times):
+    """Return the subject with the lowest total study time."""
+    if len(subject_times) == 0:
+        return None
+
+    return min(subject_times, key=subject_times.get)
+
+
+def main():
+    """Run the Study Time Tracker program."""
+    filename = "study_log.csv"
+
+    try:
+        sessions = read_study_log(filename)
+
+        if len(sessions) == 0:
+            print("No study sessions found.")
+            return
+
+        total_time = calculate_total_time(sessions)
+        average_session = calculate_average_session(sessions)
+        subject_times = time_per_subject(sessions)
+        weakest_subject = find_weakest_subject(subject_times)
+
+        print()
+        print("===================================")
+        print("       STUDY TIME TRACKER")
+        print("===================================")
+
+        print("Total study time:", total_time, "minutes")
+        print("Average session:", round(average_session, 2), "minutes")
+
+        print()
+        print("Study time per subject:")
+        print("-----------------------------------")
+
+        for subject, minutes in subject_times.items():
+            print(subject + ":", minutes, "minutes")
+
+        print("-----------------------------------")
+        print("Subject needing more attention:", weakest_subject)
+        print("===================================")
+
+    except FileNotFoundError:
+        print("Error: study_log.csv was not found.")
+
+    except ValueError:
+        print("Error: Minutes Studied must contain numbers.")
+
+    except KeyError:
+        print("Error: The CSV file is missing a required column.")
+
+
+if __name__ == "__main__":
+    main()
