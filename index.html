@@ -1,43 +1,74 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asanda Jele | WDD 130</title>
-    <meta name="description" content="Asanda Jele's WDD 130 Home Page - Web Fundamentals">
-    <meta name="author" content="Asanda Jele">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="description" content="Experience the thrill of white water rafting with our expert guides. Book your adventure today!">
+    <title>Home | White Water Rafting Adventures</title>
+    <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
+
     <header>
+        <img src="images/logo.jpg" alt="White Water Rafting Logo">
         <nav>
-            <a href="#">Home</a>
-            <a href="wwr/">Rafting Website</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
-    <div class="grid">
-        <aside class="box">
-            <h2>South Africa</h2>
-            <img src="images/country.jpg" alt="Beautiful South Africa">
-            <p>South Africa is known for its diverse cultures, languages, and beautiful landscapes. It is often called the "Rainbow Nation" due to its multicultural diversity.</p>
-        </aside>
+    <main>
 
-        <main>
-            <h1>Asanda Jele | WDD 130</h1>
-            <img src="images/profile.jpg" alt="Asanda Jele" width="200">
-            <p>Hello! My name is Asanda Jele and I am from South Africa. I enjoy reading and learning new things. I am currently studying Software Development. I am excited to learn more about web development and design.</p>
-            
-            <ul class="box">
-                <li><a href="https://www.churchofjesuschrist.org/temples/details/salt-lake-temple" target="_blank">Salt Lake Temple</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/temples/details/provo-utah-temple" target="_blank">Provo Utah Temple</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/temples/details/johannesburg-south-africa-temple" target="_blank">Johannesburg South Africa Temple</a></li>
-            </ul>
-        </main>
-    </div>
+        <div class="hero">
+            <img src="images/hero-image.jpg" alt="People rafting down a river">
+            <h1>Conquer the Rapids!</h1>
+        </div>
+
+        <section class="grid-layout">
+            <div class="grid-item">
+                <img src="images/rafting1.jpg" alt="Group rafting together">
+                <h2>Unforgettable Adventures</h2>
+                <p>Our expert guides will lead you through the most exciting rapids while ensuring your safety. Perfect for families and thrill-seekers alike.</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/rafting2.jpg" alt="Scenic river view">
+                <h2>Breathtaking Scenery</h2>
+                <p>Immerse yourself in nature. Our trips take you through stunning canyons and pristine wilderness that you can only see from the river.</p>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Join Our Newsletter</h2>
+            <p>Get the latest updates on river conditions and special offers!</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready for the trip of a lifetime?</h2>
+            <p>Explore our exciting rafting packages and find the perfect adventure for you.</p>
+            <a href="trips.html" class="cta-button">View Our Trips</a>
+        </section>
+
+    </main>
 
     <footer>
-        <p>&copy; 2026 ✦ Asanda Jele ✦ South Africa</p>
+        <p>&copy; 2026 White Water Rafting | Asanda Jele</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com"><img src="images/facebook.jpg" alt="Facebook"></a>
+            <a href="https://instagram.com"><img src="images/instagram.jpg" alt="Instagram"></a>
+            <a href="https://twitter.com"><img src="images/twitter.jpg" alt="Twitter"></a>
+        </nav>
     </footer>
+
 </body>
 </html>
