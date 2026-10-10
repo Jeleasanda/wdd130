@@ -1,4 +1,3 @@
-/* --- GENERAL PAGE STYLES --- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +5,6 @@ body {
     color: #333;
 }
 
-/* --- HEADER & NAVIGATION --- */
 header {
     display: flex;
     align-items: center;
@@ -24,14 +22,13 @@ header nav a {
     color: white;
     text-decoration: none;
     padding: 0 15px;
-    font-size: 1rem;
 }
 
 header nav a:hover {
     text-decoration: underline;
 }
 
-/* --- HERO IMAGE WITH ABSOLUTE POSITIONING --- */
+/* Hero image with the heading on top */
 .hero {
     position: relative;
     width: 100%;
@@ -57,7 +54,7 @@ header nav a:hover {
     text-align: center;
 }
 
-/* --- CSS GRID LAYOUT (For Home & Trips Pages) --- */
+/* Two-column grid used on home and trips pages */
 .grid-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -80,7 +77,6 @@ header nav a:hover {
     border-radius: 5px;
 }
 
-/* --- NEWSLETTER FORM --- */
 .newsletter {
     background-color: #333;
     color: white;
@@ -114,7 +110,6 @@ header nav a:hover {
     font-size: 1rem;
 }
 
-/* --- CALL TO ACTION SECTION --- */
 .cta-section {
     text-align: center;
     padding: 40px 20px;
@@ -136,7 +131,6 @@ header nav a:hover {
     background-color: #0056b3;
 }
 
-/* --- TRIPS TABLE --- */
 .table-section {
     padding: 20px;
     max-width: 1000px;
@@ -165,7 +159,6 @@ header nav a:hover {
     background-color: #f2f2f2;
 }
 
-/* --- FOOTER --- */
 footer {
     background-color: #1a5276;
     color: white;
